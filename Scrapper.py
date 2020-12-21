@@ -26,14 +26,14 @@ def send_mail():
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('saurabhpundliksable@gmail.com','SAUrabh@030398')
+    server.login('SecondaryEmailID','yourPassword')
 
     subject='price fell down!'
     body='Check the Amazon Link: https://www.amazon.in/Sony-Full-Frame-Mirrorless-Interchangeable-Lens-F3-5-5-6/dp/B07B45D8WV/ref=sr_1_1?crid=1Z2O35B19RTGZ&dchild=1&keywords=sony+alpha+7+iii&qid=1599071065&sprefix=sony+alpha%2Caps%2C295&sr=8-1'
     msg=f"Subject:{subject}\n\n{body}"
     server.sendmail(
-        'saurabhpundliksable@gmail.com',
-        'sablesaurabh98@gmail.com',
+        'secondary mailID',
+        'mailID on which you want notification',
         msg
     )
     print('Hey email has been sent')
